@@ -1,0 +1,160 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(87, 87, 87);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+#popularLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Adjust checkbox size and center it */
+#popularLabel input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #222;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 1px; /* 🔧 fine-tune for perfect alignment */
+}
+
+
+#popularLabel input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+
+#popularLabel input[type="checkbox"]:checked {
+  background-color: #4ade80;
+  border-color: #4ade80;
+}
+
+
+#popularLabel input[type="checkbox"]::after {
+  content: "";
+  width: 4px;
+  height: 8px;
+  border: solid #111;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: absolute;
+  top: 2px;
+}
+
+#popularLabel input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    gap: 20px;
+}
+
+.app-footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
+
+.app-footer a {
+  color: #4ade80; /* soft green for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+.app-footer p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+#selectFamiliy {
+  appearance: none;
+  -webkit-appearance: none; /* Safari/Chrome */
+  -moz-appearance: none;    /* Firefox */
+  
+  padding: 3px 5px;
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border 0.2s ease, background-color 0.2s ease;
+}
+
+#selectFamiliy:hover {
+  border-color: #888;
+  background-color: #3a3a3a;
+}
+
+#selectFamiliy:focus {
+  outline: none;
+  border-color: #4ade80;
+  box-shadow: 0 0 1px rgba(102, 233, 135, 0.317);
+}
+
+#worldMap{
+    padding: 15px;
+    height: max-content;
+}
+
+#svgmap{
+    size: 10%;
+    width: 80%;
+    max-width: 800px;
+    min-width: 300px;
+}
+
+@media(max-width: 700px){
+    .header h2{
+        font-size: 12px;
+    }
+    .header span{
+        font-size: 12px;
+    }
+
+
+    label{
+        font-size: 15px;
+    }
+
+    #selectFamiliy{
+        font-size: 15px;
+    }
+
+    #familyLabel{
+        display: none;
+    }
+}

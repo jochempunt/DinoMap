@@ -1,0 +1,32 @@
+.dino-item {
+  margin-bottom: 8px;
+}
+
+.dino-header {
+  display: flex;
+  justify-content:space-between;
+  padding: 12px;
+  background-color: #454545c8;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.281);
+  cursor: pointer;
+}
+
+.dino-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 12px;
+  justify-content: left;
+  text-align: left;
+max-height: 0;
+  overflow: hidden;
+  background-color: #606060;
+}
+
+.dino-details.open {
+  max-height: 300px; /* or use something large */
+}
+
+
+
+
