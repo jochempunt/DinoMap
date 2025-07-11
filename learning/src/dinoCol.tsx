@@ -12,7 +12,13 @@ interface props{
 const DinoItem = ({ dino, isOpen, onToggle }:props) => {
   return (
     <div className="dino-item">
-      <div className="dino-header" onClick={onToggle}>
+      <div className="dino-header" tabIndex={0} onClick={onToggle}
+       onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); // prevents scrolling on Space
+      onToggle(e);
+    }
+  }}>
         <span className="dino-name">{dino.name}</span>
       </div>
 

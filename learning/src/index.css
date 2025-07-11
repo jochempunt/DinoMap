@@ -2,15 +2,28 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
+
+
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: radial-gradient(circle at center, #25463c 20%, #171717 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #e0f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .random{
@@ -19,6 +32,7 @@
   padding: 5px 8px;
   border-radius: 10px;
   color: white;
-  background-color:blueviolet ;
+  background-color:rgb(43, 226, 183) ;
+  cursor: pointer;
 }
 

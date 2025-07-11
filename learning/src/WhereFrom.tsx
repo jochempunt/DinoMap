@@ -64,7 +64,6 @@ const uniqueFamilies = useMemo(() => {
       </header>
 
       <div className="filters">
-        <span>filters:</span>
 
         <label htmlFor="popular" id="popularLabel">
           <div className="checkbox-wrapper">

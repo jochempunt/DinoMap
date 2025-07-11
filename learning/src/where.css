@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
 .header{
     display: flex;
     flex-direction: row;
@@ -8,6 +10,12 @@
     margin-bottom: 10px;
 }
 
+.header h2{
+    font-family: "Michroma",sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
 
 
 #popularLabel {
@@ -15,10 +23,11 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
-  margin-bottom: 10px;
   cursor: pointer;
   line-height: 1;
 }
+
+
 
 /* Adjust checkbox size and center it */
 #popularLabel input[type="checkbox"] {
@@ -127,8 +136,49 @@
 
 #worldMap{
     padding: 15px;
-    height: max-content;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#map-frame {
+  background: radial-gradient(circle at center, #0a2a2f 0%, #061a1d 100%);
+  border: 3px solid #75aa9f;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow:
+    0 0 5px #00ffccb1,
+    inset 0 0 2px #00ffcc86;
+  position: relative;
+}
+
+
+#map-frame {
+  background: radial-gradient(circle at center, #0a2a1f 0%, #051417 100%);
+  border-radius: 15px;
+  padding: 0;
+  border: 2px solid #044a3cce; /* glowing primary color */
+
+  /* Sci-fi inner and outer glow and edge bevel */
+  box-shadow:
+    0 0 8px 2px #00ffcc,            /* outer glow */
+    inset 0 0 2px #00ffcc,          /* inner glow */
+    inset 0 0 15px rgba(0,255,204,0.15), /* inner foggy light */
+    inset 0 1px 1px rgba(255,255,255,0.08), /* top edge highlight */
+    inset 0 -2px 3px rgba(0,0,0,0.3);       /* bottom shadow for depth */
+}
+
+
+#map-frame img, 
+#map-frame svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+
 
 #svgmap{
     size: 10%;
@@ -157,4 +207,97 @@
     #familyLabel{
         display: none;
     }
+}
+
+
+/* --- HEADER: clean digital screen panel look --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(145deg, #1d2d2d, #121c1c);
+  border: 1px solid #00ffcc55;
+  border-radius: 8px;
+  box-shadow:
+    0 0 4px #00ffcc44,
+    inset 0 -2px 4px rgba(0, 255, 204, 0.08);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  color: #e0fdfd;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Optional: for h2 inside */
+.header h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #9ff;
+}
+
+/* --- FILTERS --- */
+.filters {
+  display: flex;
+  gap: 20px;
+  padding: 8px 16px;
+  background: rgba(1, 33, 33, 0.4);
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(1, 22, 18, 0.06);
+}
+
+/* --- SELECT --- */
+#selectFamiliy {
+  appearance: none;
+  padding: 5px 10px;
+  background-color: #101818;
+  color: #aefcef;
+  border: 1px solid #00ffcc55;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#selectFamiliy:hover {
+  border-color: #00ffcc;
+  background-color: #142222;
+}
+
+#selectFamiliy:focus {
+  outline: none;
+  box-shadow: 0 0 5px #00ffccaa;
+}
+
+/* --- CHECKBOX (unchanged except font tweak) --- */
+#popularLabel {
+  font-family: 'Orbitron', sans-serif;
+  color: #ccffee;
+}
+
+/* --- FOOTER --- */
+.app-footer {
+  background-color: #0c1b1b;
+  color: #88ccc7;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #004d40;
+  box-shadow: inset 0 3px 5px rgba(0, 255, 204, 0.03);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.app-footer a {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.app-footer a:hover {
+  color: #71fac8;
+  text-decoration: underline;
+}
+
+
+
+.main-container{
+    max-width: 1200px;
+    margin: 0 auto;
 }

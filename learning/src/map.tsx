@@ -16,7 +16,7 @@ export default function Map(props:Props){
         
         // Reset all paths in all regions to gray
         document.querySelectorAll('g[id] path').forEach((p) =>
-            p.setAttribute("fill", "#ccc")
+            p.setAttribute("fill", "rgb(85, 114, 114)")
     );
     if (id === props.cont) {
         props.setCont("")
@@ -25,13 +25,13 @@ export default function Map(props:Props){
     
     // Color every <path> inside the clicked region red
     target.querySelectorAll("path").forEach((p) =>
-        p.setAttribute("fill", " #4ade80")
+        p.setAttribute("fill", "rgb(74, 222, 180)")
 );
 props.setCont(id)
 };
 return(
     <div id="worldMap">
-    
+    <div id="map-frame">
     <svg id="svgmap"  preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="0 0 468 239" width="468pt" xmlns="http://www.w3.org/2000/svg">
     <metadata>Created by potrace 1.7, written by Peter Selinger
     2001-2005</metadata>
@@ -93,6 +93,7 @@ return(
     <path d="M7552 8740 c-33 -16 -34 -30 0 -30 13 0 18 -8 18 -28 0 -15 5 -33 12 -40 19 -19 -18 -26 -79 -15 -48 9 -55 8 -63 -8 -8 -14 -4 -21 22 -33 34 -17 52 -21 44 -8 -2 4 22 8 55 7 55 0 63 -3 81 -28 l20 -28 25 35 c24 36 38 44 45 26 2 -6 14 -4 31 5 29 15 90 12 95 -5 2 -5 11 -10 20 -10 8 0 12 3 9 7 -4 3 1 12 11 19 16 12 14 16 -20 49 -20 19 -46 35 -57 35 -12 0 -21 6 -21 14 0 20 -82 40 -136 31 -33 -5 -50 -3 -62 8 -15 12 -22 11 -50 -3z" id="region-51"/>
     </g>
     </svg>
+    </div>
     </div>
 )
 }

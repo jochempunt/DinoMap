@@ -43,8 +43,8 @@ const Search = (props:Props) =>{
     
     return(
         <form onSubmit={handleSubmit}>
-        <input value={props.value} onChange={handleChange} type="text"></input>
-        <button type="submit" ref={props.ref}>check</button>
+        <input placeholder="Chicken" value={props.value} onChange={handleChange} type="text"></input>
+        <button id="submitButton" type="submit" ref={props.ref}>🔎</button>
         </form>
     )
 }
