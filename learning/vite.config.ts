@@ -12,5 +12,5 @@ export default defineConfig({
       // Enables named exports like ReactComponent
     }),
   ],
-  base: '/DinoOrNot/'
+  base: '/DinoMap/'
 });
