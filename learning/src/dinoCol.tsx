@@ -16,7 +16,7 @@ const DinoItem = ({ dino, isOpen, onToggle }:props) => {
        onKeyDown={(e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault(); // prevents scrolling on Space
-      onToggle(e);
+      onToggle();
     }
   }}>
         <span className="dino-name">{dino.name}</span>

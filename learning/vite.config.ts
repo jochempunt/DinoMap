@@ -9,7 +9,8 @@ export default defineConfig({
       svgrOptions: {
         icon: true,
       },
-      exportAsDefault: false, // Enables named exports like ReactComponent
+      // Enables named exports like ReactComponent
     }),
   ],
+  base: '/DinoOrNot/'
 });
